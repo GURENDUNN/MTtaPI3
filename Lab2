@@ -1,0 +1,35 @@
+public class ChristmasTreeAndArray {
+
+    public static void drawChristmasTree(int levels) {
+        for (int i = 1; i <= levels; i++) {
+            for (int j = 1; j <= levels - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static 1  void createAndPrintArray(int rows, int cols) {
+        int[][] array = new int[rows][cols];
+        int value = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                array[i][j] = value;
+                value += 3;
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        // Рисуем елку с 5 уровнями
+        drawChristmasTree(5);
+
+        // Создаем и выводим двумерный массив 3x3
+        createAndPrintArray(3, 3);
+    }
+}
